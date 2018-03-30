@@ -5,7 +5,7 @@
   "author": "fanliwen <flw_dream@126.com>",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "node build/run-dev",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
@@ -17,9 +17,11 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
+    "electron": "^1.8.4",
     "eslint": "^4.15.0",
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.7.1",
-    "eslint-plugin-vue": "^4.0.0"
+    "eslint-plugin-vue": "^4.0.0",
+    "nuxt-start": "^1.0.0-rc11"
   }
 }
