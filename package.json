@@ -4,23 +4,60 @@
   "description": "Nuxt.js project",
   "author": "fanliwen <flw_dream@126.com>",
   "private": true,
+  "main": "dist/main.js",
   "scripts": {
-    "dev": "node build/run-dev",
+    "dev": "node .electron-nuxt/run-dev",
     "build": "nuxt generate",
-    "start": "electron build/main.js",
+    "start": "electron .electron-nuxt/main.js",
+    "package": "electron-builder",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint"
+  },
+  "build": {
+    "productName": "electron-nuxt",
+    "appId": "elctron-nuxt.app",
+    "directories": {
+      "output": "build"
+    },
+    "files": [
+      "dist/**/*"
+    ],
+    "dmg": {
+      "contents": [
+        {
+          "x": 410,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 130,
+          "y": 150,
+          "type": "file"
+        }
+      ]
+    },
+    "mac": {
+      "icon": "build/icons/icon.icns"
+    },
+    "win": {
+      "icon": "build/icons/icon.ico"
+    },
+    "linux": {
+      "icon": "build/icons"
+    }
   },
   "dependencies": {
     "nuxt": "^1.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
+    "babili-webpack-plugin": "^0.1.2",
     "electron": "^1.8.4",
+    "electron-builder": "^20.8.1",
     "eslint": "^4.15.0",
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.7.1",
-    "eslint-plugin-vue": "^4.0.0",
-    "nuxt-start": "^1.0.0-rc11"
+    "eslint-plugin-vue": "^4.0.0"
   }
 }
