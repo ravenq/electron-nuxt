@@ -13,13 +13,14 @@ const newWin = () => {
     height: 600
   })
   if (isDev) {
-    return win.loadURL("http://localhost:3000") // eslint-disable-line
+    win.loadURL("http://localhost:3000") // eslint-disable-line
+  } else {
+    win.loadURL(url.format({
+      pathname: path.join(__dirname, '../dist/index.html'),
+      protocol: 'file:',
+      slashes: true
+    }))
   }
-  win.loadURL(url.format({
-    pathname: path.join(__dirname, '../dist/index.html'),
-    protocol: 'file:',
-    slashes: true
-  }))
   win.on('closed', () => win = null) // eslint-disable-line
 }
 

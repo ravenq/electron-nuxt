@@ -7,8 +7,10 @@
   "main": "dist/main.js",
   "scripts": {
     "dev": "node .electron-nuxt/run-dev",
-    "build": "nuxt generate",
-    "start": "electron .electron-nuxt/main.js",
+    "build:electron": "webpack --config .electron-nuxt/webpack.main.config.js",
+    "build:nuxt": "nuxt generate",
+    "build": "npm run build:electron & npm run build:nuxt",
+    "start": "electron dist/main.js",
     "package": "electron-builder",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint"
