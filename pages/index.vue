@@ -6,15 +6,15 @@
         electron-nuxt
       </h1>
       <h2 class="subtitle">
-        Nuxt.js project
+        electron-nuxt project
       </h2>
       <div class="links">
         <a
-          href="https://nuxtjs.org/"
+          href="https://ravenq.github.io/"
           target="_blank"
           class="button--green">Documentation</a>
         <a
-          href="https://github.com/nuxt/nuxt.js"
+          href="https://github.com/ravenq/electron-nuxt"
           target="_blank"
           class="button--grey">GitHub</a>
       </div>
@@ -23,13 +23,13 @@
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
+import AppLogo from "~/components/AppLogo.vue";
 
 export default {
   components: {
     AppLogo
   }
-}
+};
 </script>
 
 <style>
@@ -42,7 +42,8 @@ export default {
 }
 
 .title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
   display: block;
   font-weight: 300;
   font-size: 100px;
