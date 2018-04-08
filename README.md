@@ -1,6 +1,10 @@
 # electron-nuxt
 
-> Nuxt.js project
+> Electron-nuxt project
+
+The Electron-nuxt is a electron project for nuxt.
+
+Fork this repo and make an electron app easily.
 
 ## Build Setup
 
@@ -11,12 +15,10 @@ $ npm install # Or yarn install
 # serve with hot reload at localhost:3000
 $ npm run dev
 
-# build for production and launch server
+# build for production and launch app
 $ npm run build
 $ npm start
 
-# generate static project
-$ npm run generate
+# make package with electron builder
+$ npm run package
 ```
-
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
